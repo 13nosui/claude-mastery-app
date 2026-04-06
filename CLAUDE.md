@@ -11,7 +11,7 @@
 - [x] GitHub リポジトリの作成・初回プッシュ
 - [x] Vercel デプロイ（`vercel login` / `vercel link` / `vercel deploy`）
 - [x] Vercel Plugin の導入
-- [ ] `.claude/settings.json` のカスタマイズ（allowedTools, permissions）
+- [x] `.claude/settings.json` のカスタマイズ（allowedTools, permissions）
 
 ### Plan Mode & Checkpoints
 - [x] Plan Mode の使用（設計提示 → ユーザー承認フロー）
@@ -42,16 +42,16 @@
 - [x] セッション間でのメモリ活用
 
 ### スキル (Skills)
-- [ ] `/commit` スキルの活用
-- [ ] `/review-pr` スキルの活用
-- [ ] カスタムスキルの作成
-- [ ] `vercel:deploy` / `vercel:env` スキルの活用
+- [x] `/commit` スキルの活用
+- [x] `/review-pr` スキルの活用
+- [x] カスタムスキルの作成
+- [x] `vercel:deploy` / `vercel:env` スキルの活用
 
 ### 高度な機能
-- [ ] Extended Thinking の制御（`Option+T` トグル）
-- [ ] Multi-agent ワークフロー（orchestrate スキル）
-- [ ] Sessions 管理（`/sessions`）
-- [ ] `/loop` による定期実行タスク
+- [x] Extended Thinking の制御（`Option+T` トグル）
+- [x] Multi-agent ワークフロー（orchestrate スキル）
+- [x] Sessions 管理（`/sessions`）
+- [x] `/loop` による定期実行タスク
 
 ---
 

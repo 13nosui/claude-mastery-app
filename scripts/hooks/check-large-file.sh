@@ -23,12 +23,12 @@ fi
 
 LINE_COUNT=$(wc -l < "$FILE_PATH" | tr -d ' ')
 
-if [ "$LINE_COUNT" -ge 500 ]; then
+if [ "$LINE_COUNT" -ge 800 ]; then
   {
     echo "⚠️  [PreToolUse 安全ガード] 大きなファイルの編集がブロックされました"
     echo ""
     echo "    対象ファイル: $FILE_PATH"
-    echo "    行数: ${LINE_COUNT} 行 (閾値: 500 行)"
+    echo "    行数: ${LINE_COUNT} 行 (閾値: 800 行)"
     echo ""
     echo "    500 行を超えるファイルの編集は、変更の影響範囲が大きくなりがちです。"
     echo "    次のいずれかを検討してください:"
