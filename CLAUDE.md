@@ -19,7 +19,7 @@
 - [x] Checkpoint からのロールバック
 
 ### Hooks
-- [ ] PostToolUse Hook の設定（自動 lint / format）
+- [x] PostToolUse Hook の設定（自動 lint / format）
 - [ ] PreToolUse Hook の設定（ファイルサイズガード等）
 - [ ] Stop Hook の設定（セッション終了時の最終ビルド確認）
 
