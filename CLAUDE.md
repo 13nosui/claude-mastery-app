@@ -31,9 +31,9 @@
 - [ ] Background agent の活用
 
 ### MCP (Model Context Protocol)
-- [ ] MCP サーバーの設定（`/mcp`）
-- [ ] Context7 MCP の導入（ライブラリドキュメント取得）
-- [ ] Vercel MCP サーバーの活用
+- [x] MCP サーバーの設定（`/mcp`）
+- [x] Context7 MCP の導入（ライブラリドキュメント取得）
+- [x] Vercel MCP サーバーの活用
 - [ ] カスタム MCP サーバーの作成
 
 ### Memory システム
