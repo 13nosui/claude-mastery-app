@@ -15,8 +15,8 @@
 
 ### Plan Mode & Checkpoints
 - [x] Plan Mode の使用（設計提示 → ユーザー承認フロー）
-- [ ] Checkpoint の作成・活用（`/checkpoint`）
-- [ ] Checkpoint からのロールバック
+- [x] Checkpoint の作成・活用（`/checkpoint`）
+- [x] Checkpoint からのロールバック
 
 ### Hooks
 - [ ] PostToolUse Hook の設定（自動 lint / format）
