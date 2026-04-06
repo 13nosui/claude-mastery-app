@@ -24,11 +24,11 @@
 - [ ] Stop Hook の設定（セッション終了時の最終ビルド確認）
 
 ### Subagents & Agent ツール
-- [ ] Explore agent の活用（コードベース調査）
-- [ ] Planner agent の活用（実装計画）
-- [ ] Code Reviewer agent の活用（コードレビュー）
-- [ ] 並列 agent 実行（複数 agent を同時起動）
-- [ ] Background agent の活用
+- [x] Explore agent の活用（コードベース調査）
+- [x] Planner agent の活用（実装計画）
+- [x] Code Reviewer agent の活用（コードレビュー）
+- [x] 並列 agent 実行（複数 agent を同時起動）
+- [x] Background agent の活用
 
 ### MCP (Model Context Protocol)
 - [x] MCP サーバーの設定（`/mcp`）
@@ -37,8 +37,8 @@
 - [ ] カスタム MCP サーバーの作成
 
 ### Memory システム
-- [ ] user / feedback / project / reference メモリの作成
-- [ ] MEMORY.md インデックスの整備
+- [x] user / feedback / project / reference メモリの作成
+- [x] MEMORY.md インデックスの整備
 - [ ] セッション間でのメモリ活用
 
 ### スキル (Skills)
