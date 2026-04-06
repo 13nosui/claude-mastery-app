@@ -20,8 +20,8 @@
 
 ### Hooks
 - [x] PostToolUse Hook の設定（自動 lint / format）
-- [ ] PreToolUse Hook の設定（ファイルサイズガード等）
-- [ ] Stop Hook の設定（セッション終了時の最終ビルド確認）
+- [x] PreToolUse Hook の設定（ファイルサイズガード等）
+- [x] Stop Hook の設定（セッション終了時の最終ビルド確認）
 
 ### Subagents & Agent ツール
 - [x] Explore agent の活用（コードベース調査）
