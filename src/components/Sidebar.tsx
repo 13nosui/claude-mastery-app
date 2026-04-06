@@ -4,9 +4,10 @@ interface SidebarProps {
   categories: MasteryCategory[]
   selectedId: string
   onSelect: (id: string) => void
+  mounted: boolean
 }
 
-export function Sidebar({ categories, selectedId, onSelect }: SidebarProps) {
+export function Sidebar({ categories, selectedId, onSelect, mounted }: SidebarProps) {
   return (
     <aside className="flex flex-col w-64 shrink-0 border-r border-zinc-800 overflow-y-auto bg-zinc-950">
       <div className="px-5 py-6 border-b border-zinc-800">
@@ -26,6 +27,7 @@ export function Sidebar({ categories, selectedId, onSelect }: SidebarProps) {
             category={category}
             selectedId={selectedId}
             onSelect={onSelect}
+            mounted={mounted}
           />
         ))}
       </nav>
@@ -37,9 +39,10 @@ interface CategorySectionProps {
   category: MasteryCategory
   selectedId: string
   onSelect: (id: string) => void
+  mounted: boolean
 }
 
-function CategorySection({ category, selectedId, onSelect }: CategorySectionProps) {
+function CategorySection({ category, selectedId, onSelect, mounted }: CategorySectionProps) {
   const completedCount = category.items.filter((i) => i.completed).length
   const totalCount = category.items.length
 
@@ -49,8 +52,8 @@ function CategorySection({ category, selectedId, onSelect }: CategorySectionProp
         <span className="text-xs font-semibold tracking-widest uppercase text-zinc-500">
           {category.icon} {category.label}
         </span>
-        <span className="text-xs text-zinc-600">
-          {completedCount}/{totalCount}
+        <span className="text-xs text-zinc-600" suppressHydrationWarning>
+          {mounted ? `${completedCount}/${totalCount}` : `—/${totalCount}`}
         </span>
       </div>
       <ul className="space-y-0.5">

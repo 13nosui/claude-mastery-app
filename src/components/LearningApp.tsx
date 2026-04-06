@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import type { MasteryCategory } from '@/types/mastery'
 import { Sidebar } from '@/components/Sidebar'
 import { ContentArea } from '@/components/ContentArea'
@@ -20,14 +20,23 @@ export function LearningApp({ categories }: LearningAppProps) {
     .filter((i) => i.completed)
     .map((i) => i.id)
 
-  const [completedIds, setCompletedIds] = useState<Set<string>>(() => {
-    if (typeof window === 'undefined') return new Set(defaultCompleted)
+  // 初期値は常にデータの default を使う（SSR とクライアント初回描画を一致させる）
+  const [completedIds, setCompletedIds] = useState<Set<string>>(
+    () => new Set(defaultCompleted)
+  )
+  const [mounted, setMounted] = useState(false)
+
+  // マウント後に localStorage の値でハイドレート（SSR と初回描画を一致させる必要があるためここで setState する）
+  useEffect(() => {
     try {
       const stored = localStorage.getItem(STORAGE_KEY)
-      if (stored) return new Set(JSON.parse(stored) as string[])
+      if (stored) {
+        // eslint-disable-next-line react-hooks/set-state-in-effect
+        setCompletedIds(new Set(JSON.parse(stored) as string[]))
+      }
     } catch {}
-    return new Set(defaultCompleted)
-  })
+    setMounted(true)
+  }, [])
 
   const toggleCompleted = (id: string) => {
     setCompletedIds((prev) => {
@@ -57,6 +66,7 @@ export function LearningApp({ categories }: LearningAppProps) {
         categories={enrichedCategories}
         selectedId={selectedId}
         onSelect={setSelectedId}
+        mounted={mounted}
       />
       <ContentArea item={selectedItem} onToggle={toggleCompleted} />
     </div>
