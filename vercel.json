@@ -1,5 +1,4 @@
 {
-  "name": "claude-mastery-app",
   "framework": "nextjs",
   "buildCommand": "npm run build",
   "installCommand": "npm ci",
