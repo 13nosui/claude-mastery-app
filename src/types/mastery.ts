@@ -5,6 +5,8 @@ export interface MasteryItem {
   description: string
   detail: string
   commands?: string[]
+  sourceUrl?: string
+  usageExample?: string
 }
 
 export interface MasteryCategory {
