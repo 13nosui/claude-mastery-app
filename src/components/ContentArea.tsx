@@ -21,7 +21,7 @@ export function ContentArea({ item, onToggle }: ContentAreaProps) {
   if (!item) {
     return (
       <main className="flex-1 overflow-y-auto bg-zinc-900 flex items-center justify-center">
-        <p className="text-zinc-600 text-sm">項目を選択してください</p>
+        <p className="text-zinc-400 text-sm">項目を選択してください</p>
       </main>
     )
   }
@@ -33,7 +33,13 @@ export function ContentArea({ item, onToggle }: ContentAreaProps) {
           <div className="flex items-center gap-3 mb-4">
             <button
               onClick={() => onToggle(item.id)}
-              className={`inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-medium border transition-colors cursor-pointer ${
+              aria-pressed={item.completed}
+              aria-label={
+                item.completed
+                  ? '完了済み。クリックで未着手に戻す'
+                  : '未着手。クリックで完了にする'
+              }
+              className={`inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-medium border transition-colors cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500 focus-visible:ring-offset-2 focus-visible:ring-offset-zinc-900 ${
                 item.completed
                   ? 'bg-indigo-500/10 text-indigo-400 border-indigo-500/20 hover:bg-indigo-500/20'
                   : 'bg-zinc-800 text-zinc-400 border-zinc-700 hover:bg-zinc-700 hover:text-zinc-200'
@@ -41,11 +47,11 @@ export function ContentArea({ item, onToggle }: ContentAreaProps) {
             >
               {item.completed ? (
                 <>
-                  <span>✓</span> 完了済み
+                  <span aria-hidden="true">✓</span> 完了済み
                 </>
               ) : (
                 <>
-                  <span>○</span> 未着手
+                  <span aria-hidden="true">○</span> 未着手
                 </>
               )}
             </button>
@@ -103,9 +109,11 @@ export function ContentArea({ item, onToggle }: ContentAreaProps) {
                 href={item.sourceUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-4 py-2.5 rounded-lg border border-zinc-700 bg-zinc-800 text-sm text-zinc-300 hover:border-zinc-500 hover:text-zinc-100 transition-colors"
+                aria-label={`公式ドキュメントを新しいタブで開く: ${item.sourceUrl}`}
+                className="inline-flex items-center gap-2 px-4 py-2.5 rounded-lg border border-zinc-700 bg-zinc-800 text-sm text-zinc-300 hover:border-zinc-500 hover:text-zinc-100 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500 focus-visible:ring-offset-2 focus-visible:ring-offset-zinc-900"
               >
                 <svg
+                  aria-hidden="true"
                   className="w-4 h-4 shrink-0 text-zinc-500"
                   fill="none"
                   stroke="currentColor"
@@ -124,7 +132,7 @@ export function ContentArea({ item, onToggle }: ContentAreaProps) {
           )}
 
           <div className="pt-4 border-t border-zinc-800">
-            <p className="text-xs text-zinc-600">
+            <p className="text-xs text-zinc-400">
               {item.completed
                 ? 'このトピックは学習済みです。クリックで未着手に戻せます。'
                 : 'まだ試していません。実際に手を動かして体験してみましょう。'}
