@@ -34,12 +34,12 @@
 - [x] MCP サーバーの設定（`/mcp`）
 - [x] Context7 MCP の導入（ライブラリドキュメント取得）
 - [x] Vercel MCP サーバーの活用
-- [ ] カスタム MCP サーバーの作成
+- [x] カスタム MCP サーバーの作成
 
 ### Memory システム
 - [x] user / feedback / project / reference メモリの作成
 - [x] MEMORY.md インデックスの整備
-- [ ] セッション間でのメモリ活用
+- [x] セッション間でのメモリ活用
 
 ### スキル (Skills)
 - [ ] `/commit` スキルの活用
