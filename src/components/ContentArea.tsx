@@ -1,5 +1,17 @@
 import type { MasteryItem } from '@/types/mastery'
 
+function renderDetail(text: string) {
+  return text.split(/(（[^）]+）)/g).map((part, i) =>
+    part.startsWith('（') && part.endsWith('）') ? (
+      <span key={i} className="text-zinc-500">
+        {part}
+      </span>
+    ) : (
+      <span key={i}>{part}</span>
+    )
+  )
+}
+
 interface ContentAreaProps {
   item: MasteryItem | undefined
   onToggle: (id: string) => void
@@ -51,7 +63,7 @@ export function ContentArea({ item, onToggle }: ContentAreaProps) {
             <h2 className="text-xs font-semibold tracking-widest uppercase text-zinc-500 mb-4">
               詳細解説
             </h2>
-            <p className="text-sm text-zinc-400 leading-7">{item.detail}</p>
+            <p className="text-sm text-zinc-400 leading-7">{renderDetail(item.detail)}</p>
           </section>
 
           {item.usageExample && (
