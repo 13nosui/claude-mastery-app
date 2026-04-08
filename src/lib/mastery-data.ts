@@ -9,7 +9,7 @@ export const MASTERY_CATEGORIES: MasteryCategory[] = [
       {
         id: 'what-is-claude-code',
         label: 'Claude Code とは？',
-        completed: true,
+        completed: false,
         description: 'ターミナルの中で動く、あなたの「副操縦士」AI エージェント。',
         detail: 'Claude Code は、黒い画面（ターミナル／コマンドを打ち込む画面）の中で動く AI エージェント（自律的に作業するアシスタント）です。ブラウザ版の Claude と違い、あなたの PC の中にあるプロジェクトの保管場所（リポジトリ）を直接読み込み、ファイルを書き換えたり、コマンドを実行したりと、実際に手を動かして仕事を進めてくれます。「隣に座って一緒にキーボードを叩いてくれる副操縦士」のような存在で、指示を受けて考え、調べ、実行し、結果を報告してくれます。専門知識がなくても、やりたいことを日本語で伝えるだけでプロの仕事をサポートしてくれるのが最大の特徴です。',
         sourceUrl: 'https://docs.anthropic.com/en/docs/claude-code/overview',
@@ -18,7 +18,7 @@ export const MASTERY_CATEGORIES: MasteryCategory[] = [
       {
         id: 'use-cases-by-role',
         label: '職種別：活用シーンの例',
-        completed: true,
+        completed: false,
         description: 'PdM・デザイナー・管理部・エンジニア、それぞれの現場で Claude Code が効く場面。',
         detail: 'Claude Code はエンジニア専用のツールではありません。テキストとファイルを扱うすべての職種で活躍します。代表的な職種ごとの活用シーンは以下の通りです。\n\n【PdM（プロダクトマネージャー）】仕様書（PRD）の下書き作成、既存機能との整合性チェック、ユーザーフィードバックの優先順位付け。\n\n【デザイナー】デザインガイドラインとの照合、アクセシビリティ（誰でも使いやすい設計）監査、コンポーネント（部品）命名の統一チェック。\n\n【管理部・バックオフィス】社内規定（ルール集）の横断照会、議事録の要約、ナレッジ（知識）の整理と検索性向上。\n\n【エンジニア】バグ（不具合）修正、自動テストの作成、リファクタリング（書き直し）、コードレビュー。\n\n共通するのは「文書やファイルが散らばっていて手作業では追い切れない」場面です。',
         usageExample: 'デザイナーが「この画面、ブランドガイドラインに沿っているか確認して」と依頼すると、Claude Code がガイドラインの文書と実装ファイルの両方を読み、ズレている箇所をリストアップして改善案まで提示してくれる。',
@@ -26,7 +26,7 @@ export const MASTERY_CATEGORIES: MasteryCategory[] = [
       {
         id: 'minimum-setup',
         label: '最低限必要なセットアップ',
-        completed: true,
+        completed: false,
         description: 'Node.js・API キー・インストールコマンドの 3 点だけで始められる。',
         detail: 'Claude Code を使い始めるのに必要なものは、たった 3 つだけです。\n\n1. **Node.js（ノードジェイエス）v18 以上**：JavaScript を PC 上で動かすための実行環境（プログラムを動かす土台）。公式サイト（https://nodejs.org）からインストーラーをダウンロードできます。\n\n2. **Anthropic API キー**：Claude を利用するための鍵（認証情報）。console.anthropic.com から無料で取得できます。取得後はターミナルで環境変数（設定値）として設定します。\n\n3. **インストールコマンド**：下記のコマンドを 1 回打つだけで Claude Code 本体がインストールされます。\n\nこれだけで準備完了です。難しい設定ファイルを書いたり、複雑な環境構築を行う必要はありません。',
         commands: [
@@ -45,7 +45,7 @@ export const MASTERY_CATEGORIES: MasteryCategory[] = [
       {
         id: 'practice-template',
         label: '実習テンプレートをダウンロードして学習を開始',
-        completed: true,
+        completed: false,
         description: 'このサイトの全内容を実際に試せる 40 個のプロンプト集を手元に置く。',
         detail: 'ここから先の学習をスムーズに進めるための「実習キット」です。このサイトの全カテゴリ（セットアップ・Plan Mode・Hooks・Subagents・MCP・Memory・Skills・高度な機能・職種別プレイブック）に対応した、合計 40 個の「コピペして Claude に投げるだけ」のプロンプトが並んでいます。\n\n【手順】\n1. 下の curl コマンドで、空のフォルダに `claude-mastery-template.md` をダウンロードします（リンクから直接保存でも OK）。\n2. そのフォルダの中で `claude` コマンドを実行して Claude Code を起動します。\n3. 起動した Claude にまず「このフォルダにある claude-mastery-template.md を読んで、一緒に学習を進めていきたい」と伝えます。\n4. あとはこのサイトを上から順に読みながら、対応するプロンプトをテンプレートからコピーして Claude に貼り付けていくだけです。\n\n非エンジニアの方でも迷わないよう、専門用語には注釈（保管場所／不具合 など）を付けています。「読むだけの学習」から「手を動かす学習」へ切り替える最初の一歩として、必ずこの項目からダウンロードしてください。',
         commands: [
@@ -71,7 +71,7 @@ export const MASTERY_CATEGORIES: MasteryCategory[] = [
       {
         id: 'claude-md',
         label: 'CLAUDE.md の作成',
-        completed: true,
+        completed: false,
         description: 'プロジェクトのルールと規約をClaude Codeに伝えるための設定ファイル。',
         detail: 'CLAUDE.md はプロジェクトの保管場所（リポジトリ）のフォルダ最上部（ルート）に置くことで、Claude Code がプロジェクトに参加するたびに自動的に読み込まれます。コーディング規約・フォルダ構成・変更の保存記録（コミット）ルール・禁止事項などを記述しておくと、会話のたびに説明する手間がなくなります。子フォルダに置いた CLAUDE.md も自動でしらみつぶしに読み込まれるため、小さな部品の集まり（パッケージ）ごとに固有のルールを記載することも可能です。',
         commands: ['cat CLAUDE.md', 'ls **/.claude/CLAUDE.md'],
@@ -81,7 +81,7 @@ export const MASTERY_CATEGORIES: MasteryCategory[] = [
       {
         id: 'github-push',
         label: 'GitHub リポジトリの作成・プッシュ（オプション）',
-        completed: true,
+        completed: false,
         description: '【オプション】作業内容をチームで共有・バックアップしたい場合のみ。Claude Code の学習自体には必須ではありません。',
         detail: '【この項目はオプションです】Claude Code は GitHub（ソースコードの保管・共有サービス）と連携していなくても、PC のローカル環境だけで問題なく使えます。ただし、作業内容をチームで共有したり、誤って消してしまったときに復元できるようにしたい場合は、GitHub の保管場所（リポジトリ）にアップロードしておくと安心です。\n\nClaude Code は gh CLI（コマンドラインツール）を活用してプロジェクトの保管場所の作成・PR（変更提案）作成・Issue（課題）管理まで一貫して行えます。`gh repo create` で保管場所を作成し、`git push -u origin main` でクラウドへの初回アップロード（プッシュ）まで完結できます。まずは Claude Code そのものに慣れてから、必要を感じたタイミングで取り組めば十分です。',
         commands: ['gh repo create <name> --public', 'git push -u origin main'],
@@ -91,7 +91,7 @@ export const MASTERY_CATEGORIES: MasteryCategory[] = [
       {
         id: 'vercel-deploy',
         label: 'Vercel デプロイ（オプション）',
-        completed: true,
+        completed: false,
         description: '【オプション】作ったものを Web に公開したい場合のみ。Claude Code の学習自体には不要です。',
         detail: '【この項目はオプションです】Vercel（ブイセル）は Web サイトやアプリを無料で公開できるサービスです。Claude Code で作成した成果物を誰かに見てもらいたい、スマホからもアクセスしたい、という場合にだけ利用すれば OK です。学習の初期段階では飛ばして問題ありません。\n\nVercel へのWeb上への公開（デプロイ）は `vercel login` → `vercel link` → `vercel deploy` の3ステップ。プロジェクトを Vercel に紐付けると GitHub と連携し、コードをクラウドへアップロード（プッシュ）するたびに自動で Web に公開されるようになります。`--prod` フラグで本番環境に直接公開できます。',
         commands: ['vercel login', 'vercel link', 'vercel deploy', 'vercel --prod'],
@@ -101,7 +101,7 @@ export const MASTERY_CATEGORIES: MasteryCategory[] = [
       {
         id: 'vercel-plugin',
         label: 'Vercel Plugin の導入（オプション）',
-        completed: true,
+        completed: false,
         description: '【オプション】Vercel を使う方のみ。Claude Code の学習自体には不要です。',
         detail: '【この項目はオプションです】前項の「Vercel デプロイ」を実際に使う場合にだけ導入を検討してください。Claude Code を学ぶだけなら不要です。\n\nVercel Plugin を追加すると、vercel:deploy・vercel:env・vercel:ai-sdk などの専用スキル（得意技）が利用可能になります。Webに公開する方法（デプロイ戦略）・環境変数（秘密の設定値）管理・AI SDK（AI機能のツールキット）統合など Vercel 特有のやり方が自動的に適用されます。',
         commands: ['npx plugins add vercel/vercel-plugin --target claude-code -y'],
@@ -111,7 +111,7 @@ export const MASTERY_CATEGORIES: MasteryCategory[] = [
       {
         id: 'settings-json',
         label: 'settings.json のカスタマイズ',
-        completed: true,
+        completed: false,
         description: 'Claude Code の動作ルールを設定ファイルで細かく制御する。',
         detail: '`~/.claude/settings.json`（全プロジェクト共通）または `.claude/settings.local.json`（そのプロジェクト専用）でツールの自動許可・仕掛け（フック）・外部接続（MCP サーバー）を設定します。`permissions.allow` に許可パターンを書くと毎回の「本当に実行しますか？」確認をスキップできます。例：`"Bash(npm run:*)"` と書くと npm コマンド全般を自動許可。チームで共有する場合は `.claude/settings.json`（Git で管理）に置き、個人の差分は `.claude/settings.local.json`（.gitignore で除外）に分離します。',
         commands: [
@@ -135,7 +135,7 @@ export const MASTERY_CATEGORIES: MasteryCategory[] = [
       {
         id: 'plan-mode',
         label: 'Plan Mode の使用',
-        completed: true,
+        completed: false,
         description: '実装前に設計案をユーザーに提示し、承認を得てから実装を開始するフロー。',
         detail: 'Plan Mode では Claude Code が「書かずに読むだけ」のモードに切り替わり、プロジェクトのすべてのソースコード（コードベース）を調査して実装計画をユーザーに提示します。複数のアプローチを比較・検討し、承認後にのみ実装を開始するため、作業の手戻りを防げます。`EnterPlanMode` → 設計 → `ExitPlanMode` → 実装 の順で進みます。プランは設計書ファイルとして自動保存されます。',
         commands: ['/plan'],
@@ -145,7 +145,7 @@ export const MASTERY_CATEGORIES: MasteryCategory[] = [
       {
         id: 'checkpoint-create',
         label: 'Checkpoint の作成・活用',
-        completed: true,
+        completed: false,
         description: '作業の節目でセーブポイントを記録し、いつでも戻れる起点を作る。',
         detail: '`/checkpoint` コマンドで現在の「変更の保存記録（コミット）の固有番号（SHA）」と日時をログファイルに記録します。複雑な作業の途中で問題が発生した場合、記録した番号まで「以前の状態に巻き戻す（ロールバック）」ことで安全に再挑戦できます。ゲームのセーブポイントと同じ感覚で使えます。',
         commands: ['/checkpoint create "feature-start"', '/checkpoint list', '/checkpoint verify "feature-start"'],
@@ -155,7 +155,7 @@ export const MASTERY_CATEGORIES: MasteryCategory[] = [
       {
         id: 'checkpoint-rollback',
         label: 'Checkpoint からのロールバック',
-        completed: true,
+        completed: false,
         description: '記録したセーブポイントまで作業を巻き戻す操作。',
         detail: '`/checkpoint verify` でセーブポイント以降の変更差分を確認できます。巻き戻し（ロールバック）する場合は `git reset --hard <SHA>` を使います。今回の実践では：ピンクの画面を作成 → セーブポイントへ `git reset --hard c2c3084` で巻き戻し → 元の画面に戻ることを確認しました。「SHA（固有番号）」はセーブデータの識別番号のようなものです。',
         commands: ['cat .claude/checkpoints.log', 'git reset --hard <sha>'],
@@ -172,7 +172,7 @@ export const MASTERY_CATEGORIES: MasteryCategory[] = [
       {
         id: 'post-tool-use',
         label: 'PostToolUse Hook',
-        completed: true,
+        completed: false,
         description: 'ファイル編集後に自動で品質チェックを実行する「きっかけ→自動実行」の仕掛け。',
         detail: '`PostToolUse` は「ファイルを書き終えた直後に自動で何かを実行する」仕掛け（フック）です。どのツール操作をきっかけにするかを `matcher` で指定します。`"Write|Edit"` と書くとファイル作成・編集のどちらでも反応します。設定ファイルの構造は `hooks.PostToolUse` の中に `{ matcher（対象）, hooks: [{ type（種類）, command（コマンド）}] }` を並べる形式です。ツールの操作内容は裏側のデータ受け渡し口（stdin）にJSON形式で渡されます。',
         commands: [
@@ -190,7 +190,7 @@ export const MASTERY_CATEGORIES: MasteryCategory[] = [
       {
         id: 'pre-tool-use',
         label: 'PreToolUse Hook',
-        completed: true,
+        completed: false,
         description: 'ツール実行前に事前チェックを行い、問題のある操作を未然にブロックする仕掛け。',
         detail: '`PreToolUse` はツール実行前に任意のチェックを走らせる「事前審査」の仕掛け（フック）です。チェック処理が「終了シグナル 2（exit code 2）」を返すとツール実行がキャンセルされます（0 は通過、1 は警告のみ）。代表的な使い道：①800行を超えるファイルの書き込みをブロック、②パスワードなどの秘密情報（secrets）を検出して書き込みを拒否、③安全チェックを飛ばすフラグ（`--no-verify`）付きの操作をブロック。ツールの操作内容は裏側のデータ受け渡し口（stdin）にJSON形式で渡されます。',
         commands: [
@@ -209,7 +209,7 @@ export const MASTERY_CATEGORIES: MasteryCategory[] = [
       {
         id: 'stop-hook',
         label: 'Stop Hook',
-        completed: true,
+        completed: false,
         description: '会話を終了するときに最終チェックを自動実行する「退出前確認」の仕掛け。',
         detail: '`Stop` は会話セッションが終了する直前に自動実行される仕掛け（フック）です。Webで見れる形に組み立てる（ビルド）コマンドやテスト実行を設定しておくと、作業終了時に必ず動作確認が走ります。継続的インテグレーション（CI）の代わりにローカルでの最終確認として活用できます。`async: true`（非同期モード）を指定すると Claude の応答をブロックせずにバックグラウンドで実行できます。`timeout`（タイムアウト）を秒単位で指定しないとデフォルトの60秒で強制終了します。',
         commands: [
@@ -236,7 +236,7 @@ export const MASTERY_CATEGORIES: MasteryCategory[] = [
       {
         id: 'explore-agent',
         label: 'Explore agent',
-        completed: true,
+        completed: false,
         description: 'プロジェクト内の調査・検索に特化した「探偵担当」のエージェント。',
         detail: 'Explore agent は「ファイルを探す・中身を読む」専門の担当者（エージェント）です。余計な権限を持たない軽量な設計で、ファイル名のパターン検索・キーワード検索・プロジェクト全体のソースコード（コードベース）の把握を効率よく行います。Plan Mode の最初のフェーズで複数の Explore agent を同時起動（並列起動）してプロジェクトを多角的に調査するのが典型的な使い方です。調査の深さを "quick"（さっと）・"medium"（ほどほど）・"very thorough"（徹底的に）で指定できます。',
         commands: [
@@ -253,7 +253,7 @@ export const MASTERY_CATEGORIES: MasteryCategory[] = [
       {
         id: 'planner-agent',
         label: 'Planner agent',
-        completed: true,
+        completed: false,
         description: '実装計画の設計・全体像の検討に特化した「設計担当」のエージェント。',
         detail: 'Planner agent は探索結果を受け取り、実装のアプローチ・ファイル構成・依存関係（他との連携）・リスクを考慮した詳細な実装計画を返します。Plan Mode の第2フェーズで Explore の調査結果を渡してプランを生成させるパターンが効果的です。結果は設計書ファイルとして自動保存され、実装フェーズで参照できます。',
         commands: [
@@ -270,7 +270,7 @@ export const MASTERY_CATEGORIES: MasteryCategory[] = [
       {
         id: 'code-reviewer-agent',
         label: 'Code Reviewer agent',
-        completed: true,
+        completed: false,
         description: 'コードの品質・安全性・問題点を自動でチェックする「審査担当」のエージェント。',
         detail: 'コードを書いた直後に Code Reviewer agent を起動することで、CRITICAL（致命的な安全問題）・HIGH（バグ）・MEDIUM（品質）・LOW（スタイル）の4段階で問題を検出します。Security Reviewer agent（セキュリティ専門担当）と同時起動（並列起動）するとより網羅的なチェックになります。レビュー結果は直接会話に返ってきます。',
         commands: [
@@ -288,7 +288,7 @@ export const MASTERY_CATEGORIES: MasteryCategory[] = [
       {
         id: 'parallel-agents',
         label: '並列 agent 実行',
-        completed: true,
+        completed: false,
         description: '独立した複数の調査・チェックを同時起動して時間を節約する。',
         detail: '1つのメッセージで複数の担当者（エージェント）を同時起動できます。Claude Code は複数の作業指示を同時に実行できるため、互いに関係ない作業を並べるだけで自動的に並行処理されます。例えば「セキュリティ調査」「パフォーマンス分析」「整合性チェック」を同時起動すると、順番に実行する場合の3倍速で完了します。ただし「Aの結果をもとにBを実行する」など順序が必要な作業は直列（順番）に実行します。',
         commands: [
@@ -305,7 +305,7 @@ export const MASTERY_CATEGORIES: MasteryCategory[] = [
       {
         id: 'background-agent',
         label: 'Background agent',
-        completed: true,
+        completed: false,
         description: 'バックグラウンドで非同期に実行し、終わったら通知を受け取るエージェント。',
         detail: '`run_in_background: true`（バックグラウンド実行）を指定することで、担当者（エージェント）の完了を待たずに他の作業を続けられます。時間のかかるテスト実行・Webで見れる形に組み立てる（ビルド）確認などをバックグラウンドに回すことで、メインの会話をブロックせずに進められます。バックグラウンドのエージェントが完了すると自動的に通知が届きます。SendMessage ツールで実行中のエージェントに追加指示を送ることも可能です。',
         commands: [
@@ -330,7 +330,7 @@ export const MASTERY_CATEGORIES: MasteryCategory[] = [
       {
         id: 'mcp-setup',
         label: 'MCP サーバーの設定',
-        completed: true,
+        completed: false,
         description: 'Claude に外部ツールやサービスを使わせる接続の仕組み（MCP）を設定する。',
         detail: 'MCP（Model Context Protocol）は「Claude に外部のツールやサービスを使わせる仕組み」の総称です。接続のお作法（プロトコル）が統一されているため、さまざまな外部ツールを同じ手順で Claude に接続できます。`/mcp` コマンドで設定済みのサーバーを確認・追加できます。設定は `~/.claude/settings.json` の `mcpServers` という項目に記述します。各サーバーは「どのプログラムで動かすか（command）」「引数（args）」「必要な秘密情報（env）」で定義します。',
         commands: [
@@ -349,7 +349,7 @@ export const MASTERY_CATEGORIES: MasteryCategory[] = [
       {
         id: 'context7',
         label: 'Context7 MCP',
-        completed: true,
+        completed: false,
         description: 'ライブラリの最新ドキュメントをリアルタイムで取得する外部接続ツール。',
         detail: 'Context7 MCP を使うと、Next.js・Tailwind・Vercel SDK などの開発ツール（ライブラリ）の最新の使い方ドキュメントを会話のコンテキスト（記憶）に取り込めます。使い方は2ステップ：① `mcp__context7__resolve-library-id` でツール名から ID を調べる、② `mcp__context7__query-docs` で特定トピックのドキュメントを取得。Claude の学習データに含まれないような最近の更新（バージョンアップ後の仕様変更など）も正確に参照できるため、古い使い方でコードを書くミスを防げます。',
         commands: [
@@ -370,7 +370,7 @@ export const MASTERY_CATEGORIES: MasteryCategory[] = [
       {
         id: 'vercel-mcp',
         label: 'Vercel MCP サーバー（オプション）',
-        completed: true,
+        completed: false,
         description: '【オプション】Vercel を使う方のみ。MCP の仕組みを学ぶ参考例としても読めます。',
         detail: '【この項目はオプションです】Vercel を使わない方は読み飛ばして大丈夫です。MCP（外部ツール接続の仕組み）が実際にどう役立つのかを知る「参考例」として眺めるだけでも価値があります。\n\nVercel MCP サーバーを接続すると、Claude Code の会話内から公開（デプロイ）・ログ・環境変数（秘密の設定値）を直接操作できます。認証後は `/mcp` で "plugin:vercel:vercel" が "connected（接続済み）" になります。利用できる主要な操作：プロジェクト一覧の取得・公開履歴の確認・実行中のエラーログ取得・ビルドログ取得・Web公開の実行・ドメイン（URL）の空き確認など20以上の操作が提供されます。',
         commands: [
@@ -389,7 +389,7 @@ export const MASTERY_CATEGORIES: MasteryCategory[] = [
       {
         id: 'custom-mcp',
         label: 'カスタム MCP サーバーの作成',
-        completed: true,
+        completed: false,
         description: '独自のツールや社内システムを MCP サーバーとして実装して Claude Code に接続する。',
         detail: '社内のシステム・データベース・独自ツールを MCP サーバーとして実装することで、Claude Code から直接操作できるようになります。Node.js（JavaScript 実行環境）用の `@modelcontextprotocol/sdk` や Python 用の `mcp` ライブラリ（既製の部品）で実装します。設定は `~/.claude/settings.json` の `mcpServers` に追記します。秘密情報（API キーなど）は `env` 項目で注入でき、`${変数名}` 形式で参照できます。',
         commands: [
@@ -418,7 +418,7 @@ export const MASTERY_CATEGORIES: MasteryCategory[] = [
       {
         id: 'memory-types',
         label: 'メモリの作成・管理',
-        completed: true,
+        completed: false,
         description: 'user / feedback / project / reference の4種類のメモリで情報を会話をまたいで記憶させる。',
         detail: 'メモリはテキストファイルとして専用フォルダに保存されます。各ファイルは設定情報（frontmatter）＋本文の形式。user（ユーザー情報）: 役割・好み、feedback（フィードバック）: 作業スタイルの指示（Why：理由と How to apply：適用場面を明記）、project（プロジェクト情報）: 進行中の背景情報・締め切り、reference（参照先）: 外部リソースへのリンク、の4種類に分類します。MEMORY.md が目次ファイルとして機能し、毎セッション自動で読み込まれます。',
         commands: [
@@ -443,7 +443,7 @@ export const MASTERY_CATEGORIES: MasteryCategory[] = [
       {
         id: 'memory-index',
         label: 'MEMORY.md インデックスの整備',
-        completed: true,
+        completed: false,
         description: 'メモリファイルへのリンクをまとめた目次ファイルを整理する。',
         detail: 'MEMORY.md は毎回の会話で自動的に読み込まれる「目次ファイル」です。各エントリは1行・150文字以内に抑えます。200行を超えると超過した部分が切り捨てられるため、定期的に古くなったメモリを削除・統合して整理します。形式は `- [タイトル](ファイル名.md) — 1行の説明` です。',
         commands: [
@@ -459,7 +459,7 @@ export const MASTERY_CATEGORIES: MasteryCategory[] = [
       {
         id: 'memory-usage',
         label: 'セッション間でのメモリ活用',
-        completed: true,
+        completed: false,
         description: '過去の決定・好み・プロジェクト背景を次の会話で自動的に引き継ぐ。',
         detail: '前回の会話で記録した feedback メモリ（「テストはモックを使わない」「まとめは不要」など）が次の会話で自動的に適用されます。同じことを何度も説明する必要がなくなります。「これを記憶してください」と伝えると Claude がメモリファイルに保存します。「〇〇を忘れてください」と伝えると該当ファイルを削除します。メモリは会話の内容そのものではなく、非明白な情報（個人の好み・背景・ルール）を保存するのに最適です。',
         commands: [
@@ -486,7 +486,7 @@ export const MASTERY_CATEGORIES: MasteryCategory[] = [
       {
         id: 'builtin-skills',
         label: 'ビルトインスキルの活用（/commit・/review-pr）',
-        completed: true,
+        completed: false,
         description: '/commit・/review-pr などの組み込みスキルで頻出タスクを自動化する。',
         detail: 'Claude Code には変更の保存記録（コミット）・変更提案（PR）レビュー・コードレビューなど頻出タスクのスキル（得意技）が最初から組み込まれています。`/commit` を実行すると変更内容を解析して Conventional Commits 形式の適切な保存記録メッセージを自動生成します。`/review-pr <番号>` では変更提案の差分を取得し、品質・安全性・テストの観点でレビューコメントを生成します。スキルは `/` を頭につけて呼び出し、引数（追加情報）を渡すことも可能です。',
         commands: [
@@ -502,7 +502,7 @@ export const MASTERY_CATEGORIES: MasteryCategory[] = [
       {
         id: 'docs-lookup-skill',
         label: 'docs-lookup でライブラリ最新情報を取得',
-        completed: true,
+        completed: false,
         description: 'Context7 経由で開発ツール（ライブラリ）の最新ドキュメントを会話に取り込む専用スキル。',
         detail: '`docs-lookup` は Context7 MCP を裏側で呼び出して、Next.js・React・Tailwind・Vercel SDK などの「最新の正しい使い方」を取得する専用エージェントです。Claude の学習データは数ヶ月前の情報なので、最近のバージョンアップで変わった仕様（破壊的変更）を知らずに古い書き方を提案することがあります。docs-lookup を使えば「常に最新の公式ドキュメントを根拠とした回答」が得られます。エージェントが自動で2ステップを実行します：① ライブラリ名から ID を解決、② 該当トピックの最新ドキュメントを取得。',
         commands: [
@@ -523,7 +523,7 @@ export const MASTERY_CATEGORIES: MasteryCategory[] = [
       {
         id: 'search-code-skill',
         label: 'search_code で巨大コードベースを瞬時に検索',
-        completed: true,
+        completed: false,
         description: 'Grep / Glob / Explore agent を組み合わせて巨大なプロジェクトから必要箇所を高速に発見する。',
         detail: 'Claude Code の検索系スキル（Grep ツール・Glob ツール・Explore エージェント）を組み合わせると、何万行のコードベースでも数秒で「探したい場所」に辿り着けます。ファイル名で探すなら `Glob`（パターンマッチ）、コードの中身で探すなら `Grep`（高速な ripgrep ベース）、3往復以上の調査が必要なら `Explore` エージェント（自律的に何度でも検索を繰り返す）を使い分けます。直接「search_code」というスキル名はありませんが、これら3つを組み合わせるパターンが事実上の「コード検索スキル」です。',
         commands: [
@@ -544,7 +544,7 @@ export const MASTERY_CATEGORIES: MasteryCategory[] = [
       {
         id: 'compact-files-skill',
         label: '/compact で会話の記憶容量を節約',
-        completed: true,
+        completed: false,
         description: '長くなった会話を圧縮して、重要な情報だけを残しながら次の作業を続ける。',
         detail: 'Claude Code の会話には「記憶容量（コンテキストウィンドウ）」があり、長時間作業すると上限に近づきます。`/compact` コマンド（および `strategic-compact` スキル）は、これまでの会話を要約して情報密度を高め、空き容量を作り出す「圧縮」機能です。要約は自動生成され、決定事項・変更ファイル・残タスクが保存されます。`compact_files` という名前の単一スキルは存在しませんが、`/compact` ＋ `strategic-compact` ＋ `/save-session` の組み合わせが「会話と作業状態を安全に圧縮・保存する」事実上のスキル群です。長時間プロジェクトの必須テクニックです。',
         commands: [
@@ -564,7 +564,7 @@ export const MASTERY_CATEGORIES: MasteryCategory[] = [
       {
         id: 'vercel-skills',
         label: 'Vercel スキルの活用（オプション）',
-        completed: true,
+        completed: false,
         description: '【オプション】Vercel を使う方のみ。スキルの実例として眺めるだけでも OK です。',
         detail: '【この項目はオプションです】Vercel を使わない方は読み飛ばして大丈夫です。「スキル（得意技）」という仕組みが実際にどう便利なのかを知る参考例として読むのもおすすめです。\n\nVercel Plugin が提供するスキル（得意技）には `vercel:deploy`（公開戦略）・`vercel:env`（秘密の設定値の管理）・`vercel:ai-sdk`（AI機能ツールキットの統合）・`vercel:status`（公開状況の確認）などがあります。スキルはメッセージの内容を解析して自動的に適切なものが呼び出されます。`vercel env pull` でクラウド上の設定値をローカルに取得し、`vercel deploy --prod` で本番環境への公開を実行できます。',
         commands: [
@@ -581,7 +581,7 @@ export const MASTERY_CATEGORIES: MasteryCategory[] = [
       {
         id: 'custom-skills',
         label: 'カスタムスキルの作成',
-        completed: true,
+        completed: false,
         description: '繰り返す作業フローをスキルとして定義して何度でも再利用する。',
         detail: '`~/.claude/skills/` フォルダにマークダウンファイル（テキストファイルの一種）を作成することでカスタムスキル（オリジナルの得意技）を定義できます。スキルには起動条件・実行手順・注意事項を記述し、`/スキル名` で呼び出せます。チームで共有する場合はプロジェクトの保管場所（リポジトリ）内に置くこともできます。`/skill-create` スキルを使うと対話的にスキルファイルを生成できます。`/learn` スキルは過去の会話からパターンを抽出して自動的にスキル化することも可能です。',
         commands: [
@@ -605,7 +605,7 @@ export const MASTERY_CATEGORIES: MasteryCategory[] = [
       {
         id: 'extended-thinking',
         label: 'Extended Thinking の制御',
-        completed: true,
+        completed: false,
         description: 'Claude が内部で「じっくり考える」時間（トークン）を制御する機能。',
         detail: 'Extended Thinking（拡張思考）はデフォルトで有効で、最大 31,999 トークン（思考の単位）分の内部推論を行います。`Option+T`（Mac）/ `Alt+T`（Windows/Linux）でオン・オフを切り替えでき、`MAX_THINKING_TOKENS`（最大思考トークン数）という設定で上限を調整できます。`Ctrl+O` でClaude の内部思考をリアルタイムで確認できます（詳細表示モード）。アーキテクチャ（全体設計）の検討・複雑なバグの原因調査など深い推論が必要なタスクで特に効果的です。コストを抑えたい場合は `export MAX_THINKING_TOKENS=5000` で上限を下げます。',
         commands: [
@@ -621,7 +621,7 @@ export const MASTERY_CATEGORIES: MasteryCategory[] = [
       {
         id: 'multi-agent',
         label: 'Multi-agent ワークフロー',
-        completed: true,
+        completed: false,
         description: '複数の専門担当者（エージェント）を連携させて大規模な作業を分業処理する。',
         detail: '`/orchestrate` スキルを使うと、設計担当・実装担当・レビュー担当など役割の異なる複数の担当者（エージェント）を協調させた複雑な作業フローを構築できます。典型的な流れ：① Explore agents でプロジェクト調査（同時並列）→ ② Plan agent で実装計画作成 → ③ 実装エージェントが計画を実行 → ④ コードレビュー・セキュリティチェック担当が同時並列でレビュー。1つの担当者では完結しない大規模な機能開発・全体的な作り直しに適しています。',
         commands: [
@@ -636,7 +636,7 @@ export const MASTERY_CATEGORIES: MasteryCategory[] = [
       {
         id: 'sessions',
         label: 'Sessions 管理',
-        completed: true,
+        completed: false,
         description: '過去の会話セッションを再開・参照する機能。',
         detail: '`/sessions` コマンドで過去の会話一覧を確認できます。各セッション（会話）にはサマリー（要約）と変更ファイル一覧が自動生成されます。長期プロジェクトで「先週の続きから」といった使い方が可能になります。`/resume-session` で特定の会話を再開すると、そのセッションの背景情報が読み込まれます。サマリーファイルは専用フォルダに自動保存されます。',
         commands: [
@@ -651,7 +651,7 @@ export const MASTERY_CATEGORIES: MasteryCategory[] = [
       {
         id: 'loop',
         label: '/loop による定期実行',
-        completed: true,
+        completed: false,
         description: '指定した間隔でコマンドやスキルを自動的に繰り返し実行する機能。',
         detail: '`/loop 5m /verify` のように指定するとWeb公開（デプロイ）の監視・テスト実行・状態確認などを一定間隔で自動実行できます。継続的インテグレーション（CI）が走っている間の監視や、長時間のバッチ処理（大量データ処理）の進捗確認に便利です。`/loop-status` で現在のループ状態を確認し、`/loop-start` で再起動できます。Stop フック（終了時の仕掛け）と組み合わせるとループ終了時に自動クリーンアップも可能です。',
         commands: [
@@ -673,7 +673,7 @@ export const MASTERY_CATEGORIES: MasteryCategory[] = [
       {
         id: 'role-pdm',
         label: 'PdM（プロダクトマネージャー）',
-        completed: true,
+        completed: false,
         description: '仕様書の自動生成・要望の優先順位付け・エンジニアとの橋渡し。',
         detail: 'PdM（プロダクトマネージャー）の頭の中にある断片的なアイデアを Claude に渡し、Planner agent を使って構造化された PRD（製品要求仕様書）に昇華させます。過去の仕様（Memory）を参照するため、既存機能との矛盾も自動で検知。さらに膨大なユーザーフィードバックを読み込ませ、ビジネスインパクトと実装コストを天秤にかけた優先順位付けまで自動化できます。技術的な話題もコードベースを直接読み込んだ Claude が「ビジネスリスク」に翻訳してくれるので、エンジニアと同じ解像度で議論できるようになります。',
         commands: [
@@ -690,7 +690,7 @@ export const MASTERY_CATEGORIES: MasteryCategory[] = [
       {
         id: 'role-designer',
         label: 'デザイナー',
-        completed: true,
+        completed: false,
         description: 'ガイドライン照合・アクセシビリティ監査・デザイントークン同期。',
         detail: 'デザイナーにとって Claude Code は「コードとデザインの翻訳機」です。Figma で作ったデザインガイドラインとコードベースの実装を照らし合わせ、色・余白（スペーシング）・タイポグラフィ（文字設計）のズレを一覧化できます。さらにアクセシビリティ（誰でも使いやすい設計）監査として WCAG（国際基準）のコントラスト比・キーボード操作・スクリーンリーダー対応のチェックまで自動化可能。デザイントークン（色やサイズの変数）を CSS 変数へ同期させる単純作業も、指示 1 行でまとめて完了します。',
         commands: [
@@ -707,7 +707,7 @@ export const MASTERY_CATEGORIES: MasteryCategory[] = [
       {
         id: 'role-backoffice',
         label: '管理部・バックオフィス',
-        completed: true,
+        completed: false,
         description: '社内規定の横断検索・議事録要約・ナレッジ整理。',
         detail: '管理部やバックオフィスの仕事は「散らばった文書を探して・読んで・まとめる」ことの繰り返しです。Claude Code は社内規定（ルール集）・契約書・議事録などを入れたフォルダを丸ごと読み込み、自然言語の質問に横断的に答えてくれます。「有給の繰越ルールは？」「昨年の取締役会で A 案件はどう決まった？」といった問い合わせに、根拠となるファイル名と該当箇所を添えて回答。議事録の自動要約、ナレッジ（知識）ベースの MECE（モレなくダブリなく）整理、問い合わせ対応テンプレートの作成まで一気通貫で任せられます。',
         commands: [
@@ -724,7 +724,7 @@ export const MASTERY_CATEGORIES: MasteryCategory[] = [
       {
         id: 'role-engineer',
         label: 'エンジニア',
-        completed: true,
+        completed: false,
         description: 'バグ修正・テスト自動生成・リファクタリング・コードレビュー。',
         detail: 'エンジニアにとって Claude Code は「隣に座るシニアエンジニア」です。バグ（不具合）のエラーログを渡すだけで原因を特定し修正パッチを提案、tdd-guide agent でテストファーストのワークフロー（テストを先に書く開発手法）を自動化、code-reviewer agent で PR（変更提案）のセルフレビューまで実行できます。リファクタリング（書き直し）では命名の統一・重複排除・型の厳格化（TypeScript の any 削減）を並列 agent で同時実行。デプロイ（Webへの公開）前の最終ビルド確認まで Stop フック（仕掛け）で自動化すれば、ヒューマンエラーの余地がなくなります。',
         commands: [
@@ -743,7 +743,7 @@ export const MASTERY_CATEGORIES: MasteryCategory[] = [
       {
         id: 'role-marketer',
         label: 'マーケター・広報',
-        completed: true,
+        completed: false,
         description: 'リリースノート作成・コンテンツ制作・SEO 最適化。',
         detail: 'マーケターや広報担当者にとって、Claude Code は「コードベースを理解できるコピーライター」です。前回のタグ（リリース時点の目印）から現在までの変更記録を解析し、技術的な差分をユーザー向けの「新機能・改善点」の親しみやすい文章へ自動変換。ブログ記事・SNS 投稿・プレスリリースの下書きまで、トーン指定付きで生成できます。SEO（検索エンジン最適化）の観点では、既存ページのメタ情報（title・description・OGP）の一貫性チェックや、キーワード分析も自動化可能です。',
         commands: [
