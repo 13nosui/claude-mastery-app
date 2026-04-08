@@ -2,6 +2,84 @@ import type { MasteryCategory } from '@/types/mastery'
 
 export const MASTERY_CATEGORIES: MasteryCategory[] = [
   {
+    id: 'introduction',
+    label: 'はじめに',
+    icon: '👋',
+    items: [
+      {
+        id: 'what-is-claude-code',
+        label: 'Claude Code とは？',
+        completed: true,
+        description: 'ターミナル（黒い画面の作業場）の中で動く、あなたの「副操縦士」AI エージェント。',
+        detail: 'Claude Code は、ブラウザ版の Claude とは大きく異なり、あなたの PC の中にあるファイルやプロジェクトの保管場所（リポジトリ）を直接読み取り、実際に手を動かして仕事を進めてくれる AI アシスタントです。文章を返すだけでなく、ファイルを作ったり、コードを修正したり、テストを実行したりと「実務作業を代行する同僚」として振る舞います。エンジニアはもちろん、PdM・デザイナー・管理部門の方でも、専門知識を持った副操縦士（コパイロット）として活用できます。',
+        commands: [
+          '# インストール後、プロジェクトのフォルダで起動するだけ:',
+          'claude',
+        ],
+        sourceUrl: 'https://docs.anthropic.com/en/docs/claude-code/overview',
+        usageExample: '「このフォルダの中身を読んで、README を日本語でわかりやすく書き直して」と依頼すると、Claude Code がファイルを直接読み込み、その場で書き換えまで完了してくれる。ブラウザ版のようにコピー&ペーストする必要がない。',
+      },
+      {
+        id: 'use-cases-by-role',
+        label: '職種別：活用シーンの例',
+        completed: true,
+        description: 'PdM・デザイナー・管理部・エンジニア、それぞれの仕事をどう助けてくれるかを比較。',
+        detail: `Claude Code はエンジニア専用のツールではありません。職種ごとに「副操縦士」としての使い方が異なります。
+
+| 職種 | 主な活用シーン | 具体例 |
+| --- | --- | --- |
+| PdM（プロダクト企画） | 仕様書作成・整合性チェック | ラフなメモから PRD（製品要求仕様書）を自動生成し、既存機能との矛盾を検出 |
+| デザイナー | ガイドライン照合・アクセシビリティ監査 | デザイントークン（色やサイズのルール）との差分確認、WCAG（アクセシビリティ基準）チェック |
+| 管理部・バックオフィス | 社内規定照会・ナレッジ整理 | 散在する社内ドキュメントを横断検索し、FAQ 形式に整理 |
+| エンジニア | バグ修正・自動テスト | エラーログから原因特定、テストコードの自動生成、リファクタ（コード整理）の提案 |
+
+どの職種でも共通しているのは、「自分の手元にある情報（ファイル・ドキュメント・コード）をそのまま渡せる」という点です。`,
+        commands: [
+          '# PdM: 仕様書の自動生成',
+          'claude "この議事録から PRD を作って"',
+          '# デザイナー: ガイドライン照合',
+          'claude "このコンポーネントが design-tokens.json に準拠しているか確認して"',
+          '# 管理部: ナレッジ整理',
+          'claude "docs/ 配下の規定を読んで FAQ にまとめて"',
+          '# エンジニア: バグ修正',
+          'claude "このエラーログの原因を特定して修正して"',
+        ],
+        sourceUrl: 'https://docs.anthropic.com/en/docs/claude-code/overview',
+        usageExample: '管理部のメンバーが「就業規則と育児休業規程を読んで、育休取得までのフローを箇条書きで説明して」と依頼したところ、複数のファイルを横断して読み込み、申請ステップを漏れなく整理してくれた。',
+      },
+      {
+        id: 'minimum-setup',
+        label: '最低限必要なセットアップ',
+        completed: true,
+        description: 'Claude Code を始めるために必要な 3 つの準備。',
+        detail: `Claude Code を動かすために必要なのは、以下の 3 点だけです。
+
+1. **Node.js（v18 以上）**
+   — JavaScript を PC 上で動かすための基盤ソフトウェア（実行環境）。公式サイトから LTS 版をインストールすれば OK です。
+
+2. **Anthropic API Key**
+   — Claude の頭脳を使うための「鍵」（認証情報）。console.anthropic.com で発行し、環境変数（PC が覚えておく秘密の設定値）として登録します。
+
+3. **インストールコマンドの実行**
+   — ターミナル（黒い画面の作業場）で、下記の npm コマンドを 1 行実行するだけでインストールが完了します。
+
+インストール後は、作業したいフォルダへ移動して \`claude\` と打つだけで対話が始まります。難しい初期設定はほとんどありません。`,
+        commands: [
+          '# 1. Node.js のバージョン確認（v18 以上であること）',
+          'node --version',
+          '# 2. API Key を環境変数に登録',
+          'export ANTHROPIC_API_KEY="sk-ant-..."',
+          '# 3. Claude Code をインストール',
+          'npm install -g @anthropic-ai/claude-code',
+          '# 4. プロジェクトのフォルダで起動',
+          'claude',
+        ],
+        sourceUrl: 'https://docs.anthropic.com/en/docs/claude-code/quickstart',
+        usageExample: '初めて Claude Code に触れる非エンジニアのメンバーでも、上記の 4 ステップを順に実行するだけで、その日のうちに自分の資料フォルダを AI と一緒に整理し始めることができた。',
+      },
+    ],
+  },
+  {
     id: 'setup',
     label: 'セットアップ・基盤',
     icon: '⚙️',
