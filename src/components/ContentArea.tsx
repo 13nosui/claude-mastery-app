@@ -1,4 +1,5 @@
 import type { MasteryItem } from '@/types/mastery'
+import { CommandList } from '@/components/CommandList'
 
 function renderDetail(text: string) {
   return text.split(/(（[^）]+）)/g).map((part, i) =>
@@ -88,15 +89,7 @@ export function ContentArea({ item, onToggle }: ContentAreaProps) {
               <h2 className="text-xs font-semibold tracking-widest uppercase text-zinc-500 mb-4">
                 コマンド例
               </h2>
-              <ul className="space-y-2">
-                {item.commands.map((cmd) => (
-                  <li key={cmd}>
-                    <code className="block font-mono text-sm bg-zinc-800 border border-zinc-700 rounded-lg px-4 py-3 text-indigo-300 leading-relaxed">
-                      {cmd}
-                    </code>
-                  </li>
-                ))}
-              </ul>
+              <CommandList commands={item.commands} />
             </section>
           )}
 
