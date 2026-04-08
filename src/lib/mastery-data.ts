@@ -611,7 +611,7 @@ export const MASTERY_CATEGORIES: MasteryCategory[] = [
       {
         id: 'prd-generation',
         label: 'PRD (製品要求仕様書) の自動生成',
-        completed: false,
+        completed: true,
         description: 'ラフなメモから、技術的に矛盾のない仕様書を瞬時に作成する。',
         detail: 'PdM の頭の中にある断片的なアイデアを Claude に渡し、Planner agent を使って構造化された PRD（製品要求仕様書）に昇華させます。過去の仕様（Memory）を参照するため、既存機能との矛盾も自動で検知します。専門用語には注釈を付け、チーム全員が理解できる言葉で出力させることが可能です。',
         commands: [
@@ -626,7 +626,7 @@ export const MASTERY_CATEGORIES: MasteryCategory[] = [
       {
         id: 'backlog-prioritization',
         label: 'ロジカルなバックログ優先順位付け',
-        completed: false,
+        completed: true,
         description: 'ユーザーの声や戦略目標に基づき、タスクの優先順位を整理する。',
         detail: '膨大なユーザーフィードバックや不具合報告を Context7 や search_code で読み込み、ビジネスインパクトと実装コスト（Subagents による見積もり）を天秤にかけて、優先順位（Priority）を論理的にランク付けします。PdM の判断基準を Memory に学習させておけば、より精度の高い提案が得られます。',
         commands: [
@@ -640,7 +640,7 @@ export const MASTERY_CATEGORIES: MasteryCategory[] = [
       {
         id: 'tech-bridge',
         label: 'エンジニアとの技術的架け橋',
-        completed: false,
+        completed: true,
         description: '技術的な詳細を非エンジニアでも分かる言葉に翻訳し、意思疎通を円滑にする。',
         detail: 'コードベースを直接理解している Claude を通じて、複雑なエラーや技術的負債を「ビジネスリスク」として翻訳させます。PdM はエンジニアと同じ解像度で議論ができるようになり、リポジトリ（保管場所）の中身をブラックボックス化させません。',
         commands: [
@@ -655,7 +655,7 @@ export const MASTERY_CATEGORIES: MasteryCategory[] = [
       {
         id: 'release-notes-automation',
         label: 'リリースノートと告知の自動作成',
-        completed: false,
+        completed: true,
         description: '実装完了した差分から、ユーザー向けの告知文を自動生成する。',
         detail: '前回の変更の保存記録（コミット）から現在までの差分を解析し、技術的な変更点をユーザー向けの「新機能・改善点」の文章へ自動で書き換えます。デプロイ（Webへの公開）完了と同時に告知の下書きまで終わらせるワークフローを構築できます。',
         commands: [
