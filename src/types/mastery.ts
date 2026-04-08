@@ -15,3 +15,12 @@ export interface MasteryCategory {
   icon: string
   items: MasteryItem[]
 }
+
+export interface Role {
+  id: string
+  label: string
+  icon: string
+  tagline: string
+  description: string
+  items: MasteryItem[]
+}
